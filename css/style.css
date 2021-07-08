@@ -120,20 +120,16 @@ a {
   align-items: center;
   min-height: 70vh;
   margin-top: -200px;
-  padding: 150px 0 200px; }
+  padding: 200px 0 200px; }
   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0, 0)) {
     .about {
-      -webkit-clip-path: url(#wave);
-      clip-path: url(#wave); }
-      @media (max-width: 1200px) {
-        .about {
-          margin-top: 0px;
-          padding: 5rem;
-          flex-direction: column; }
-          @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0, 0)) {
-            .about {
-              -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-              clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); } } } }
+      -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+      clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%); } }
+  @media (max-width: 1200px) {
+    .about {
+      margin-top: 0px;
+      padding: 5rem;
+      flex-direction: column; } }
   .about__right {
     flex: 0 1 30%; }
   .about__image {
@@ -145,9 +141,19 @@ a {
         display: none; } }
   .about__left {
     flex: 0 1 40%; }
+    .about__left-icons {
+      width: 100%;
+      padding: 3rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; }
+      .about__left-icons-img {
+        height: 5rem;
+        margin: 2rem; }
   .about__text {
     font-size: 2rem;
     font-weight: 300;
+    text-align: center;
     color: #fdfbff;
     padding: 3rem;
     line-height: 1.6; }
@@ -162,19 +168,11 @@ a {
   align-items: center;
   margin: -220px 0 5rem;
   padding: 15% 3% 50px; }
-  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0, 0)) {
-    .projects {
-      -webkit-clip-path: url(#wave);
-      clip-path: url(#wave); } }
   @media (max-width: 1200px) {
     .projects {
       grid-template-columns: repeat(2, 1fr);
       margin-top: 3rem;
-      padding-top: 0rem; }
-      @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0, 0)) {
-        .projects {
-          -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); } } }
+      padding-top: 0rem; } }
   @media (max-width: 800px) {
     .projects {
       grid-template-columns: 1fr; } }

@@ -83,16 +83,19 @@ a {
   position: relative;
 }
 
+.wave__container {
+}
+
 .nav {
   padding-top: 0.2rem;
   //   border-bottom: 1px solid #a2a2a2;
 
-  //   -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
-  //   -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
-  //   box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
-  //   -webkit-border-radius: 5px;
-  //   -moz-border-radius: 5px;
-  //   border-radius: 5px;
+  // -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  // -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  // box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  // -webkit-border-radius: 5px;
+  // -moz-border-radius: 5px;
+  // border-radius: 5px;
 
   &__logo {
     font-size: 2.9rem;
@@ -175,20 +178,24 @@ a {
   align-items: center;
   min-height: 70vh;
   margin-top: -200px;
-  padding: 150px 0 200px;
-  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0, 0)) {
-    -webkit-clip-path: url(#wave);
-    clip-path: url(#wave);
+  padding: 200px 0 200px;
+  // @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0, 0)) {
+  //   -webkit-clip-path: url(#wave);
+  //   clip-path: url(#wave);
 
-    @media (max-width: 1200px) {
-      margin-top: 0px;
-      padding: 5rem;
-      @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0, 0)) {
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-      }
-      flex-direction: column;
-    }
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0, 0)) {
+    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);
+  }
+
+  @media (max-width: 1200px) {
+    margin-top: 0px;
+    padding: 5rem;
+    // @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0, 0)) {
+    //   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    //   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    // }
+    flex-direction: column;
   }
 
   &__right {
@@ -207,11 +214,25 @@ a {
 
   &__left {
     flex: 0 1 40%;
+
+    &-icons {
+      width: 100%;
+      padding: 3rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      &-img {
+        height: 5rem;
+        margin: 2rem;
+      }
+    }
   }
 
   &__text {
     font-size: 2rem;
     font-weight: 300;
+    text-align: center;
 
     color: #fdfbff;
     padding: 3rem;
@@ -222,10 +243,10 @@ a {
 .projects {
   //   min-height: 100vh;
 
-  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0, 0)) {
-    -webkit-clip-path: url(#wave);
-    clip-path: url(#wave);
-  }
+  // @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0, 0)) {
+  //   -webkit-clip-path: url(#wave);
+  //   clip-path: url(#wave);
+  // }
 
   //   background-image: linear-gradient(
   //       to right bottom,
@@ -251,10 +272,10 @@ a {
     margin-top: 3rem;
     padding-top: 0rem;
 
-    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0, 0)) {
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    }
+    // @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0, 0)) {
+    //   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    //   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    // }
   }
 
   @media (max-width: 800px) {
