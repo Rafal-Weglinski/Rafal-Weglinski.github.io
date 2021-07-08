@@ -103,13 +103,15 @@ a {
 .header {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  padding-bottom: 200px;
+  padding-top: 50px; }
   .header__wrapper {
     text-align: center;
-    margin-top: -150px; }
-  .header__paragraph {
-    padding-left: 3rem;
-    font-size: 4rem; }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%; }
 
 .about {
   background-color: #1a1f2c;
@@ -122,12 +124,25 @@ a {
   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0, 0)) {
     .about {
       -webkit-clip-path: url(#wave);
-      clip-path: url(#wave); } }
+      clip-path: url(#wave); }
+      @media (max-width: 1200px) {
+        .about {
+          margin-top: 0px;
+          padding: 5rem;
+          flex-direction: column; }
+          @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0, 0)) {
+            .about {
+              -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); } } } }
   .about__right {
     flex: 0 1 30%; }
   .about__image {
     width: 100%;
     text-align: center; }
+    @media (max-width: 1200px) {
+      .about__image {
+        width: 50%;
+        display: none; } }
   .about__left {
     flex: 0 1 40%; }
   .about__text {
@@ -151,6 +166,18 @@ a {
     .projects {
       -webkit-clip-path: url(#wave);
       clip-path: url(#wave); } }
+  @media (max-width: 1200px) {
+    .projects {
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 3rem;
+      padding-top: 0rem; }
+      @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0, 0)) {
+        .projects {
+          -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); } } }
+  @media (max-width: 800px) {
+    .projects {
+      grid-template-columns: 1fr; } }
   .projects__heading {
     padding-top: 3rem;
     padding-bottom: 2rem;
@@ -239,7 +266,9 @@ a {
     border: 1px solid #dedede;
     border-radius: 4px;
     background-clip: padding-box;
-    font-family: inherit; }
+    font-family: inherit;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 2px 2px 10px 5px #000000; }
     .contact__group > *:not(:last-child) input[type='text']:hover,
     .contact__group > *:not(:last-child) input[type='email']:hover,
     .contact__group > *:not(:last-child) textarea:hover {
