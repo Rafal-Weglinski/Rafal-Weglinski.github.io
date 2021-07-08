@@ -178,19 +178,19 @@ a {
   align-items: center;
   min-height: 70vh;
   margin-top: -200px;
-  padding: 200px 0 200px;
+  padding: 15rem 0 15rem;
   // @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0, 0)) {
   //   -webkit-clip-path: url(#wave);
   //   clip-path: url(#wave);
 
   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0, 0)) {
     -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
   }
 
   @media (max-width: 1200px) {
-    margin-top: 0px;
-    padding: 5rem;
+    // margin-top: 0px;
+    // padding: 5rem;
     // @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0, 0)) {
     //   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     //   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -223,8 +223,17 @@ a {
       flex-wrap: wrap;
 
       &-img {
-        height: 5rem;
+        height: 6rem;
         margin: 2rem;
+        transition: all 0.2s ease;
+        opacity: 0.8;
+        filter: brightness(90%) drop-shadow(4px 4px 3px black);
+
+        &:hover {
+          opacity: 1;
+          filter: brightness(100%) drop-shadow(4px 4px 3px black);
+          transform: scale(1.45);
+        }
       }
     }
   }
@@ -241,22 +250,6 @@ a {
 }
 
 .projects {
-  //   min-height: 100vh;
-
-  // @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0, 0)) {
-  //   -webkit-clip-path: url(#wave);
-  //   clip-path: url(#wave);
-  // }
-
-  //   background-image: linear-gradient(
-  //       to right bottom,
-  //       rgba(#171f34, 0.9),
-  //       rgba(red, 0.9)
-  //     ),
-  //     url(../img/photo-1461749280684-dccba630e2f6.jpeg);
-  //   background-size: cover;
-  //   background-position: bottom;
-  //   position: relative;
   background-color: #2b2f38;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -264,18 +257,13 @@ a {
   column-gap: 7rem;
   justify-items: center;
   align-items: center;
-  margin: -220px 0 5rem;
-  padding: 15% 3% 50px;
+  margin: 0 0 5rem;
+  padding: 0 3% 50px;
 
   @media (max-width: 1200px) {
     grid-template-columns: repeat(2, 1fr);
     margin-top: 3rem;
     padding-top: 0rem;
-
-    // @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0, 0)) {
-    //   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    //   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    // }
   }
 
   @media (max-width: 800px) {
