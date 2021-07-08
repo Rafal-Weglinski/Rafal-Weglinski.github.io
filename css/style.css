@@ -55,6 +55,11 @@ a {
   color: #484e5c;
   font-weight: 400; }
 
+.tags-4 {
+  font-size: 1.7rem;
+  color: #484e5c;
+  font-weight: 400; }
+
 .wrapper {
   background-image: linear-gradient(to right bottom, rgba(43, 47, 56, 0.95), rgba(4, 9, 22, 0.95)), url(../img/photo-1461749280684-dccba630e2f6.jpeg);
   background-size: cover;
@@ -205,7 +210,8 @@ a {
       z-index: 1;
       transition: filter 0.3s;
       -webkit-box-shadow: 5px 5px 15px 5px #000000;
-      box-shadow: 5px 5px 15px 5px #000000; }
+      box-shadow: 5px 5px 15px 5px #000000;
+      border-radius: 7px; }
     .projects__item:hover .projects__item-img {
       filter: blur(4px) brightness(52%);
       -webkit-filter: blur(4px) brightness(52%);
@@ -241,56 +247,47 @@ a {
 .contact {
   background-size: cover;
   background-position: bottom;
-  position: relative;
   border: none; }
   .contact__heading {
     text-align: center;
-    margin-bottom: 3rem;
-    padding-top: 5rem; }
+    margin-bottom: 3rem; }
   .contact__group {
     margin-left: 15%;
     margin-right: 15%;
-    padding-bottom: 10rem; }
+    padding-bottom: 5rem; }
   .contact__group > *:not(:last-child) {
-    font-size: 17px;
-    line-height: 1.23543;
+    font-size: 2.4rem;
+    line-height: 1.2;
     font-weight: 300;
-    letter-spacing: -0.022em;
     display: inline-block;
     vertical-align: top;
     width: 100%;
     height: 3.3em;
-    margin-bottom: 14px;
-    padding-top: 18px;
-    padding-left: 16px;
-    padding-right: 16px;
+    margin-bottom: 1.6rem;
+    padding-top: 1rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
     color: #333;
     text-align: left;
-    border: 1px solid #dedede;
-    border-radius: 4px;
-    background-clip: padding-box;
+    border: none;
+    border-radius: 7px;
     font-family: inherit;
     -webkit-box-shadow: 5px 5px 15px 5px #000000;
     box-shadow: 2px 2px 10px 5px #000000; }
-    .contact__group > *:not(:last-child) input[type='text']:hover,
-    .contact__group > *:not(:last-child) input[type='email']:hover,
-    .contact__group > *:not(:last-child) textarea:hover {
-      background-color: #eeeeee; }
   .contact__submit {
-    font-size: 2.5rem;
-    line-height: 1.47059;
-    font-weight: 300;
-    letter-spacing: -0.022em;
+    font-size: 2.9rem;
+    line-height: 1.4;
+    font-weight: 400;
     background-color: #171f34;
     border: none;
-    border-radius: 4px;
+    border-radius: 7px;
     color: white;
     cursor: pointer;
     display: inline-block;
     width: 100%;
     text-align: center;
     white-space: nowrap;
-    padding: 13px 15px 14px;
+    padding: 1.3rem 1.5rem 1rem;
     font-family: inherit;
     -webkit-box-shadow: 5px 5px 15px 5px #000000;
     box-shadow: 5px 5px 15px 5px #000000; }
@@ -307,11 +304,13 @@ a {
   .footer__icons {
     display: flex;
     display: center; }
+    .footer__icons-link:hover .footer__icons-item {
+      fill: #171f34; }
     .footer__icons-item {
       width: 6rem;
       height: 6rem;
       fill: white;
       margin: 3rem; }
   .footer__copy {
-    padding: 0.5rem 2rem 2rem 2rem;
+    padding: 0;
     font-size: 1.9rem; }
