@@ -10,7 +10,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: Josefin Sans, Ubuntu, sans-serif;
   color: #fdfbff;
   font-weight: 300;
   line-height: 1.6;
@@ -22,26 +22,49 @@ a {
 
 .heading-1 {
   font-size: 10rem;
-  font-weight: 600;
-  font-family: 'Poppins';
+  font-weight: 400;
   color: #fdfbff;
   line-height: 1;
   padding: 3rem; }
 
 .heading-2 {
-  font-size: 7rem;
-  font-weight: 600;
-  font-family: 'Poppins';
+  font-size: 8rem;
+  font-weight: 100;
   color: #fdfbff;
-  line-height: 1;
-  padding: 3rem; }
+  line-height: 1; }
+
+.heading-3 {
+  font-size: 4rem;
+  font-weight: 100;
+  color: #fdfbff;
+  line-height: 1; }
+
+.tags-1 {
+  font-size: 2.9rem;
+  color: #484e5c;
+  font-weight: 400; }
+
+.tags-2 {
+  font-size: 2.2rem;
+  color: #484e5c;
+  font-weight: 400; }
+
+.tags-3 {
+  font-size: 2.2rem;
+  color: #484e5c;
+  font-weight: 400; }
+
+.wrapper {
+  background-image: linear-gradient(to right bottom, rgba(43, 47, 56, 0.95), rgba(4, 9, 22, 0.95)), url(../img/photo-1461749280684-dccba630e2f6.jpeg);
+  background-size: cover;
+  background-position: bottom;
+  position: relative; }
 
 .nav {
-  padding-top: 1rem;
-  padding-bottom: 1rem; }
+  padding-top: 0.2rem; }
   .nav__logo {
     font-size: 2.9rem;
-    font-family: 'Montserrat', sans-serif; }
+    font-weight: 300; }
     .nav__logo a {
       color: #fdfbff; }
   .nav__list {
@@ -49,7 +72,8 @@ a {
     list-style: none; }
     .nav__list a {
       color: #fdfbff;
-      font-size: 2rem; }
+      font-size: 2rem;
+      font-weight: 300; }
       .nav__list a:hover {
         color: #718daa; }
   .nav__logo a,
@@ -73,11 +97,7 @@ a {
     justify-content: space-between; } }
 
 .header {
-  min-height: 80vh;
-  background-image: linear-gradient(to right bottom, rgba(23, 31, 52, 0.9), rgba(43, 47, 56, 0.9)), url(../img/photo-1461749280684-dccba630e2f6.jpeg);
-  background-size: cover;
-  background-position: bottom;
-  position: relative; }
+  min-height: 80vh; }
 
 .header {
   display: flex;
@@ -91,7 +111,7 @@ a {
     font-size: 4rem; }
 
 .about {
-  background-color: #171f34;
+  background-color: #1a1f2c;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -112,7 +132,6 @@ a {
   .about__text {
     font-size: 2rem;
     font-weight: 300;
-    font-family: 'Poppins';
     color: #fdfbff;
     padding: 3rem;
     line-height: 1.6; }
@@ -126,11 +145,16 @@ a {
   justify-items: center;
   align-items: center;
   margin: -220px 0 5rem;
-  padding: 15% 5% 50px; }
+  padding: 15% 3% 50px; }
   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0, 0)) {
     .projects {
       -webkit-clip-path: url(#wave);
       clip-path: url(#wave); } }
+  .projects__heading {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    grid-column: 1/-1;
+    font-size: 8rem; }
   .projects__item {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -148,7 +172,9 @@ a {
       grid-column: 1/-1;
       grid-row: 2/3;
       z-index: 1;
-      transition: filter 0.3 s; }
+      transition: filter 0.3s;
+      -webkit-box-shadow: 5px 5px 15px 5px #000000;
+      box-shadow: 5px 5px 15px 5px #000000; }
     .projects__item:hover .projects__item-img {
       filter: blur(4px) brightness(52%);
       -webkit-filter: blur(4px) brightness(52%);
@@ -176,15 +202,12 @@ a {
         transform: translateX(50%); }
 
 .footer {
-  margin-top: -100px;
-  padding-top: 100px;
   background-color: #2b2f38; }
 
 .hide {
   height: 0px; }
 
 .contact {
-  background-image: linear-gradient(to right bottom, rgba(23, 31, 52, 0.9), rgba(43, 47, 56, 0.9)), url(../img/photo-1486312338219-ce68d2c6f44d.jpeg);
   background-size: cover;
   background-position: bottom;
   position: relative;
@@ -194,13 +217,13 @@ a {
     margin-bottom: 3rem;
     padding-top: 5rem; }
   .contact__group {
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 20%;
+    margin-right: 20%;
     padding-bottom: 10rem; }
   .contact__group > *:not(:last-child) {
     font-size: 17px;
     line-height: 1.23543;
-    font-weight: 400;
+    font-weight: 300;
     letter-spacing: -0.022em;
     display: inline-block;
     vertical-align: top;
@@ -223,7 +246,7 @@ a {
   .contact__submit {
     font-size: 2.5rem;
     line-height: 1.47059;
-    font-weight: 400;
+    font-weight: 300;
     letter-spacing: -0.022em;
     background-color: #171f34;
     border: none;
@@ -235,7 +258,9 @@ a {
     text-align: center;
     white-space: nowrap;
     padding: 13px 15px 14px;
-    font-family: inherit; }
+    font-family: inherit;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 5px 5px 15px 5px #000000; }
     .contact__submit:hover {
       background-color: #718daa;
       text-decoration: none; }
